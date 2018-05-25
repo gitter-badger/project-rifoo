@@ -18,5 +18,6 @@ public class TestBCanvas {
         cvs.isShowBorder();
         cvs.setColor(0,0, Color.BLACK);
         cvs.getColor(1,1);
+        cvs.paintComponent(null);
     }
 }

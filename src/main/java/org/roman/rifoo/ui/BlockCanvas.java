@@ -32,6 +32,7 @@ public class BlockCanvas extends JPanel {
     }
 
     public void paintComponent(Graphics g) {
+        if (g == null) return;
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, getWidth(), getHeight());
         for (int i = 0; i < gridWidth; i++)
