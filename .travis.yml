@@ -1,0 +1,6 @@
+language: java
+jdk: oraclejdk8
+sudo: disabled
+script:
+  - mvn compile
+  - bash <(curl -s https://codecov.io/bash)
