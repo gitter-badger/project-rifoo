@@ -2,5 +2,5 @@ language: java
 jdk: oraclejdk8
 sudo: disabled
 script:
-  - bash <(curl -s https://codecov.io/bash)
   - mvn cobertura:cobertura
+  - bash <(curl -s https://codecov.io/bash)
