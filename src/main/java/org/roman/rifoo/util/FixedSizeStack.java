@@ -13,10 +13,6 @@ public class FixedSizeStack<T> {
     }
 
     public T pop() {
-        return (T) elements[index--];
-    }
-
-    public T get() {
-        return (T) elements[index];
+        return (T) elements[--index];
     }
 }
