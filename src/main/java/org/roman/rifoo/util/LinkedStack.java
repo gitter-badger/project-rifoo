@@ -6,7 +6,7 @@ import java.util.Iterator;
  * Created by LINKOR on 11.11.2016 in 15:40.
  * Date: 2016.11.11
  */
-public class LinkedStack<T> implements Iterable<T> {
+public class LinkedStack<T> implements Iterable<T>, Stack<T> {
     @Override
     public Iterator<T> iterator() {
         return new Iterator<T>() {
@@ -45,6 +45,23 @@ public class LinkedStack<T> implements Iterable<T> {
         Node<T> top = this.top;
         this.top = new Node<>(item, top);
     }
+
+    @Override
+    public T[] removeAll() {
+        top = new Node<>();
+        return null;
+    }
+
+    @Override
+    public T peek() {
+        return top.item;
+    }
+
+    @Override
+    public boolean empty() {
+        return top.end();
+    }
+
     public T pop() {
         T res = top.item;
         if (!top.end()) top = top.next;
